@@ -1,0 +1,185 @@
+/* For readability I am going to segment everything into different sections with comments! */
+/* This section is for the body and some style preferences I suppose. Not really nescissary but fun for sure! */
+body {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: font-family 0.3s ease;
+  background-image: none;
+  margin: 0;
+}
+
+h1 {
+  font-size: 40px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 0, 85);;
+  text-align: center;
+}
+
+.rainbow-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background: linear-gradient(270deg, red, crimson, rgb(255, 115, 0), rgb(255, 0, 128), indigo, rgb(255, 115, 0));
+  background-size: 1400% 1400%;
+  animation: colorShift 40s ease infinite;
+  margin-top: 1em;
+}
+
+@keyframes colorShift {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 25% 50%; }
+  50% { background-position: 50% 50%; }
+  75% { background-position: 75% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.wrappertop {
+  display: flex;
+  flex-flow: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; 
+}
+
+/* The end of that segment. I thought the rainbow banner was really cool :D */
+
+/* Next part is the navbar. This was a nightmare but it mostly works how I wanted it to in the end. */
+
+html {
+  scroll-snap-type: y proximity;
+}
+
+section {
+  height: 100vh; 
+  scroll-snap-align: start;
+}
+
+.Navbar {
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 100%;
+  margin: auto;
+  font-weight: bold;
+  flex-direction: row;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navtab {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  flex-direction: row;
+  padding: 5px;
+  margin: 10px;
+  font-size: 2em;
+  text-align: center;
+  background-color: crimson;
+  color: black;
+  border-radius: 10px;
+}
+
+.nav-links a:hover {
+  background-color: rgba(195, 0, 255, 0.11);
+  border-radius: 5px;
+  color: white;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+a {
+  color: black;
+}
+
+/* End of the Navbar part.*/
+
+/* This is where I plan on doing the about me*/
+
+.About {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.About p {
+  margin-left: 2em;
+  text-align: justify;
+  flex: 1;
+  color: black;
+  font-weight: bold;
+  background-color: crimson;
+  border-radius: 10px;
+  font-size: 1.6em;
+  padding: 1em;
+}
+
+.sidebyside {
+  display: flex;
+  flex-flow: row
+}
+
+.arc {
+  max-width: 12em;
+  height: 12em;
+  margin-left: 3.5em;
+  margin-right: 1.5em;
+}
+
+/* Projects section */
+
+.Proj {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.Proj p {
+  margin: 0.5em;
+  text-align: justify;
+  flex: 1;
+  color: black;
+  font-weight: bold;
+  background-color: crimson;
+  border-radius: 10px;
+  font-size: 1.6em;
+  padding: 1em;
+}
+
+/* Contact info */
+
+.Contact {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.Contact ul {
+  margin-right: 2em;
+  text-align: justify;
+  flex: 1;
+  color: black;
+  font-weight: bold;
+  background-color: crimson;
+  border-radius: 10px;
+  font-size: 1.6em;
+  padding: 1.5em;
+}
+
+.arc2 {
+  max-width: 12em;
+  height: 12em;
+  margin-right: 3.5em;
+  margin-left: 1.5em;
+}
+
+
